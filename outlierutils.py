@@ -95,7 +95,6 @@ def plot_roc_averageprecision_curves(y_true: List[int], scores: List[float]):
     ax2.set_ylabel("Precision", fontsize=14)
     ax2.set_title(f"AP curve (AUC = {ap_auc:.2f})", fontsize=15)
     ax2.legend(loc="upper right")
-    plt.display()
 
 
 def plot_top_N(y_true: List[int], scores: List[float], N: int = 100) -> pd.DataFrame:
@@ -140,5 +139,4 @@ def plot_top_N(y_true: List[int], scores: List[float], N: int = 100) -> pd.DataF
         f"Yellow: positive, Purple:Negative. Number of positives found: "
         f"{Npos_in_N} (P@Rank{N}: {Npos_in_N/N:.1%})"
     )
-    # plt.show()
     return classify_results
